@@ -1,0 +1,51 @@
+% Scenario 1: The system exhibits stable oscillations with a periodicity of approximately 70 months.
+% Lucia Llerena
+%Time span is from 0 till 200 months so:
+timespan = [0 200]; 
+% Initial populations of plants, hares, and lynxes as given
+y0  = [1 0.1 0.1]; 
+
+function dydt = plants_hare_lynx(t, y)
+% Parameters
+a1 = 0.1; % Growth rate of hares
+a2 = 0.1; % Growth rate of lynxes
+b1 = 0.01; % Predation rate of hares on plants
+b2 = 0.01; % Predation rate of lynxes on hares
+d1 = 0.05; % Death rate of hares
+d2 = 0.05; % Death rate of lynxes
+
+% Define periodicity of approximately 70 months
+period = 70;
+t_mod = mod(t, period); 
+
+% Differential equations
+dydt = zeros(3, 1);
+dydt(1) = y(1)*(1-y(1)) - ((a1*y(1)) / (1+b1*y(1)))*y(2);
+dydt(2) = ((a1*y(1)) / (1+b1*y(1)))*y(2)-d1*y(2)-((a2*y(2))/(1+b2*y(2)))*y(3);
+dydt(3) = ((a2*y(2)) / (1+b2*y(2)))*y(3)-d2*y(3);
+end
+
+
+% Plots
+% plot population size in time
+figure("Name","plot population size in time")
+[t, y] = ode45(@plants_hare_lynx, timespan, y0);
+plot(t, y(:, 1), 'r', t, y(:, 2), 'g', t, y(:, 3), 'b');
+xlabel('Time (months)');
+ylabel('Population');
+legend('Plants', 'Hares', 'Lynxes');
+title('plot population size in time');
+
+figure("Name",'State space')
+plot(y(:,1),y(:,2));
+title('State space')
+xlabel('Hares');
+ylabel('Lynxes');
+colorbar;
+
+% 3D plot state space
+figure("Name","Plot state space")
+scatter3(y(:, 2), y(:, 3), y(:, 1), [], y(:, 1), 'filled');
+xlabel('Hares');
+ylabel('Lynxes');
+zlabel('Plants');
