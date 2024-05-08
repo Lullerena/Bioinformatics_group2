@@ -3,16 +3,16 @@
 %Time span is from 0 till 200 months so:
 timespan = [0 200]; 
 % Initial populations of plants, hares, and lynxes as given
-y0  = [1 0.1 0.1]; 
+y0  = [0.5 0.5 0.5]; 
 
 function dydt = plants_hare_lynx(t, y)
 % Parameters
-a1 = 0.1; % Growth rate of hares
-a2 = 0.1; % Growth rate of lynxes
-b1 = 0.01; % Predation rate of hares on plants
-b2 = 0.01; % Predation rate of lynxes on hares
-d1 = 0.05; % Death rate of hares
-d2 = 0.05; % Death rate of lynxes
+a1 = 4; % Growth rate of hares
+a2 = 0.5 ; % Growth rate of lynxes
+b1 = 4; % Predation rate of hares on plants
+b2 = 3; % Predation rate of lynxes on hares
+d1 = 0.5; % Death rate of hares
+d2 = 0.1; % Death rate of lynxes
 
 % Define periodicity of approximately 70 months
 period = 70;
