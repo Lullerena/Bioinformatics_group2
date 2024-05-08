@@ -7,12 +7,12 @@ y0  = [0.5 0.5 0.5];
 
 function dydt = plants_hare_lynx(t, y)
 % Parameters
-a1 = 4; % Growth rate of hares
-a2 = 0.5 ; % Growth rate of lynxes
-b1 = 4; % Predation rate of hares on plants
-b2 = 3; % Predation rate of lynxes on hares
+a1 = 8; % Growth rate of hares
+a2 = 0.8 ; % Growth rate of lynxes
+b1 = 8; % Predation rate of hares on plants
+b2 = 2; % Predation rate of lynxes on hares
 d1 = 0.5; % Death rate of hares
-d2 = 0.1; % Death rate of lynxes
+d2 = 0.05; % Death rate of lynxes
 
 % Define periodicity of approximately 70 months
 period = 70;
