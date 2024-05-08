@@ -15,12 +15,27 @@ d1 = Death rate of hares
 d2 = Death rate of lynxes
 
 ### Model 1
-- During the first model, the population starts with 1 plant, and 0.1 hares and lynxes. All these three populations grow and decay following a sinusoidal curve within a period of 70 months.
-
+- During the first model, the population starts with 0.5 plant, 0.5 hares and  0.5 lynxes. All these three populations grow and decay following a sinusoidal curve within a period of 70 months.
+The paraameters for the first model are: a1 = 8;
+a2 = 0.8 ; 
+b1 = 8; 
+b2 = 2; 
+d1 = 0.5;
+d2 = 0.05;
 ### Model 2
 - During the second model, the population starts with 1 plant, and 0.1 hares and 1 lynxes. The plant and hares populations oscillate regularly and follow a sinusoidal curve between 0.04 and 0.8 for plant population size and between 0.09 and 0.68 for hare population size. However the lynxes population will dramatically decrese to 0 at about 11.8/12 months.
-
+The paraameters for the second model are: a1 = 4;
+a2 = 0.6 ; 
+b1 = 4; 
+b2 = 3; 
+d1 = 0.5;
+d2 = 0.48;
 ### Model 3
 - During the third model, the population starts with 1 plant, and 0.1 hares and 8 lynxes. The model displays a chaotic behaviour for all populations. The lynx population peaks twice, once around 40 months and the second time around 180 months.
- 
+The paraameters for the third model are: a1 = 4.5;
+a2 = 0.1; 
+b1 = 3; 
+b2 = 2; 
+d1 = 0.4;
+d2 = 0.01;
 
