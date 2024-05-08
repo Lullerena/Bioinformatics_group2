@@ -28,7 +28,7 @@ end
 
 % Plots
 % plot population size in time
-figure("Name","plot population size in time")
+figure("Name","plot population size in time  for Scenario 1")
 [t, y] = ode45(@plants_hare_lynx, timespan, y0);
 plot(t, y(:, 1), 'r', t, y(:, 2), 'g', t, y(:, 3), 'b');
 xlabel('Time (months)');
@@ -36,7 +36,7 @@ ylabel('Population');
 legend('Plants', 'Hares', 'Lynxes');
 title('plot population size in time');
 
-figure("Name",'State space')
+figure("Name",'State space  for Scenario 1')
 plot(y(:,1),y(:,2));
 title('State space')
 xlabel('Hares');
@@ -44,7 +44,7 @@ ylabel('Lynxes');
 colorbar;
 
 % 3D plot state space
-figure("Name","Plot state space")
+figure("Name","Plot state space for Scenario 1")
 scatter3(y(:, 2), y(:, 3), y(:, 1), [], y(:, 1), 'filled');
 xlabel('Hares');
 ylabel('Lynxes');
