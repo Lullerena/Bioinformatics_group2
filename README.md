@@ -1,6 +1,6 @@
 # Bioinformatics_group2
 # Members:
-- Jan
+- Jan Hladík i6324454
 - Lucia Llerena i6334735
 - Irina
 
@@ -16,3 +16,4 @@ b2 = Predation rate of lynxes on hares
 d1 = Death rate of hares
 d2 = Death rate of lynxes
  
+
